@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  <link href='https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap' rel='stylesheet'/>
+  <b:include data='blog' name='all-head-content'/>
+  <b:skin><![CDATA[
+  /* ===== IMAGO DEI - plantilla base ===== */
+  :root {
+    --bg: #050a14;
+    --panel: #0b1322;
+    --texto: #e8e3d6;
+    --suave: #9aa3b5;
+    --oro: #d4a24c;
+    --oro-claro: #f3d58a;
+    --linea: rgba(212,162,76,.25);
+    --ancho: 760px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--texto);
+    font: 400 19px/1.75 'EB Garamond', Georgia, serif;
+  }
+  a { color: var(--oro); text-decoration: none; }
+  a:hover { color: var(--oro-claro); }
+  img { max-width: 100%; height: auto; }
+  .wrap { max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
+
+  /* Cabecera */
+  .site-top { border-bottom: 1px solid var(--linea); background: rgba(5,10,20,.92); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); }
+  .site-top .wrap { max-width: 1100px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 12px; padding-bottom: 12px; }
+  .Header h1, .Header h1 a, .Header .title { margin: 0; font: 700 20px/1 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; color: var(--oro); }
+  .Header .description { display: none; }
+  .PageList ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; }
+  .PageList li a { font: 500 13px 'Cinzel', serif; letter-spacing: .14em; text-transform: uppercase; color: var(--texto); }
+  .PageList li.selected a, .PageList li a:hover { color: var(--oro-claro); }
+  .PageList h3 { display: none; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 90px 20px 70px; border-bottom: 1px solid var(--linea);
+    background: radial-gradient(ellipse at 50% 100%, rgba(212,110,40,.35), transparent 60%), linear-gradient(#0a1428, var(--bg)); }
+  .hero img { display: block; margin: 0 auto; width: 100%; max-width: 1100px; }
+  .hero h1 { font: 700 clamp(44px, 9vw, 104px)/1 'Cinzel', serif; margin: 0; letter-spacing: .06em;
+    background: linear-gradient(180deg, var(--oro-claro), var(--oro) 60%, #8a5a1c); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { margin: 18px 0 0; font: 500 clamp(13px, 2vw, 20px) 'Cinzel', serif; letter-spacing: .5em; text-transform: uppercase; color: var(--texto); }
+  .hero h3 { display: none; }
+
+  /* Contenido */
+  .main-area { padding: 50px 0 70px; }
+  .post { margin: 0 0 56px; padding-bottom: 40px; border-bottom: 1px solid var(--linea); }
+  h2.post-title, .post-title { font: 700 30px/1.25 'Cinzel', serif; color: var(--oro-claro); margin: 0 0 6px; }
+  .post-title a { color: inherit; }
+  .post-meta { font-size: 14px; color: var(--suave); margin-bottom: 22px; letter-spacing: .04em; }
+  .post-body p { margin: 0 0 1.1em; }
+  .post-body blockquote { margin: 1.4em 0; padding: 4px 22px; border-left: 3px solid var(--oro); color: var(--suave); font-style: italic; }
+  .post-body hr { border: 0; border-top: 1px solid var(--linea); margin: 2em 0; }
+  .post-footer { font-size: 14px; color: var(--suave); }
+  .blog-pager { display: flex; justify-content: space-between; margin-top: 20px; font: 500 13px 'Cinzel', serif; letter-spacing: .12em; text-transform: uppercase; }
+  .status-msg-wrap { color: var(--suave); text-align: center; }
+
+  /* Pie */
+  .site-foot { border-top: 1px solid var(--linea); padding: 30px 0 50px; text-align: center; font-size: 14px; color: var(--suave); }
+  .widget { margin: 0; }
+  .widget h2, .widget h3 { font: 500 13px 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; color: var(--oro); }
+
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    .hero { padding: 50px 16px 40px; }
+    h2.post-title, .post-title { font-size: 24px; }
+  }
+  ]]></b:skin>
+</head>
+
+<body>
+  <header class='site-top'>
+    <div class='wrap'>
+      <b:section class='no-items' id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='Imago Dei (Encabezado)' type='Header' version='2' visible='true'/>
+      </b:section>
+      <b:section class='no-items' id='nav' maxwidgets='1' showaddelement='no'>
+        <b:widget id='PageList1' locked='false' title='Menu' type='PageList' version='2' visible='true'/>
+      </b:section>
+    </div>
+  </header>
+
+  <!-- Portada / hero: solo en la pagina de inicio. Editable desde Diseño. -->
+  <b:if cond='data:view.isHomepage'>
+    <section class='hero'>
+      <b:section class='no-items' id='hero' maxwidgets='1' showaddelement='yes'>
+        <b:widget id='HTML1' locked='false' title='' type='HTML' version='2' visible='true'>
+          <b:widget-settings>
+            <b:widget-setting name='content'>&lt;h1&gt;IMAGO DEI&lt;/h1&gt;&lt;p&gt;El colapso de la ciudad&lt;/p&gt;</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'><data:content/></b:includable>
+        </b:widget>
+      </b:section>
+    </section>
+  </b:if>
+
+  <main class='main-area'>
+    <div class='wrap'>
+      <b:section class='main' id='main' showaddelement='no'>
+        <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='2' visible='true'/>
+      </b:section>
+    </div>
+  </main>
+
+  <footer class='site-foot'>
+    <div class='wrap'>
+      <b:section class='foot' id='footer' showaddelement='yes'>
+        <b:widget id='Attribution1' locked='false' title='' type='Attribution' version='2' visible='true'/>
+      </b:section>
+    </div>
+  </footer>
+</body>
+</html>
+# imagodeinovel
+Historia

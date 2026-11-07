@@ -1,2 +1,0 @@
-# imagodeinovel
-Historia
