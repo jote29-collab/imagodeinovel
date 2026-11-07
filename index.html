@@ -1,121 +1,107 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="es">
 <head>
-  <meta content='width=device-width, initial-scale=1' name='viewport'/>
-  <title><data:blog.pageTitle/></title>
-  <link href='https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;display=swap' rel='stylesheet'/>
-  <b:include data='blog' name='all-head-content'/>
-  <b:skin><![CDATA[
-  /* ===== IMAGO DEI - plantilla base ===== */
-  :root {
-    --bg: #050a14;
-    --panel: #0b1322;
-    --texto: #e8e3d6;
-    --suave: #9aa3b5;
-    --oro: #d4a24c;
-    --oro-claro: #f3d58a;
-    --linea: rgba(212,162,76,.25);
-    --ancho: 760px;
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; background: var(--bg); color: var(--texto);
-    font: 400 19px/1.75 'EB Garamond', Georgia, serif;
-  }
-  a { color: var(--oro); text-decoration: none; }
-  a:hover { color: var(--oro-claro); }
-  img { max-width: 100%; height: auto; }
-  .wrap { max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imago Dei: El colapso de la ciudad</title>
+<meta name="description" content="Novela distópica de ciencia ficción ambientada en Symmetria, una ciudad regulada por la IA VERIN.">
+<meta property="og:title" content="Imago Dei: El colapso de la ciudad">
+<meta property="og:image" content="portada.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#050a14; --panel:#0b1322; --texto:#e8e3d6; --suave:#9aa3b5;
+  --oro:#d4a24c; --oro-claro:#f3d58a; --brasa:#e0742a; --linea:rgba(212,162,76,.28);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--tinta);color:var(--texto);font:400 19px/1.75 'EB Garamond',Georgia,serif}
+a{color:var(--oro);text-decoration:none}
+a:hover{color:var(--oro-claro)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--oro-claro);outline-offset:3px}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
 
-  /* Cabecera */
-  .site-top { border-bottom: 1px solid var(--linea); background: rgba(5,10,20,.92); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(6px); }
-  .site-top .wrap { max-width: 1100px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 12px; padding-bottom: 12px; }
-  .Header h1, .Header h1 a, .Header .title { margin: 0; font: 700 20px/1 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; color: var(--oro); }
-  .Header .description { display: none; }
-  .PageList ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; }
-  .PageList li a { font: 500 13px 'Cinzel', serif; letter-spacing: .14em; text-transform: uppercase; color: var(--texto); }
-  .PageList li.selected a, .PageList li a:hover { color: var(--oro-claro); }
-  .PageList h3 { display: none; }
+/* Portada */
+.hero{position:relative;background:linear-gradient(#0a1428,var(--tinta))}
+.hero img{display:block;width:100%;max-height:92vh;object-fit:cover}
+.hero .alt{display:none;text-align:center;padding:14vh 20px 12vh;
+  background:radial-gradient(ellipse at 50% 110%,rgba(224,116,42,.55),transparent 65%),linear-gradient(#0a1428,var(--tinta))}
+.hero.sin-imagen .alt{display:block}
+.hero.sin-imagen img{display:none}
+.alt h1{margin:0;font:700 clamp(46px,11vw,120px)/1 'Cinzel',serif;letter-spacing:.05em;
+  background:linear-gradient(180deg,var(--oro-claro),var(--oro) 60%,#8a5a1c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.alt p{margin:18px 0 0;font:500 clamp(13px,2.4vw,20px) 'Cinzel',serif;letter-spacing:.45em}
+.hero{animation:entra 1.4s ease-out both}
+@keyframes entra{from{opacity:0}to{opacity:1}}
 
-  /* Hero */
-  .hero { text-align: center; padding: 90px 20px 70px; border-bottom: 1px solid var(--linea);
-    background: radial-gradient(ellipse at 50% 100%, rgba(212,110,40,.35), transparent 60%), linear-gradient(#0a1428, var(--bg)); }
-  .hero img { display: block; margin: 0 auto; width: 100%; max-width: 1100px; }
-  .hero h1 { font: 700 clamp(44px, 9vw, 104px)/1 'Cinzel', serif; margin: 0; letter-spacing: .06em;
-    background: linear-gradient(180deg, var(--oro-claro), var(--oro) 60%, #8a5a1c); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero p { margin: 18px 0 0; font: 500 clamp(13px, 2vw, 20px) 'Cinzel', serif; letter-spacing: .5em; text-transform: uppercase; color: var(--texto); }
-  .hero h3 { display: none; }
+/* Lema */
+.lema{padding:64px 0 24px;text-align:center;font-style:italic;font-size:23px;color:var(--oro-claro)}
 
-  /* Contenido */
-  .main-area { padding: 50px 0 70px; }
-  .post { margin: 0 0 56px; padding-bottom: 40px; border-bottom: 1px solid var(--linea); }
-  h2.post-title, .post-title { font: 700 30px/1.25 'Cinzel', serif; color: var(--oro-claro); margin: 0 0 6px; }
-  .post-title a { color: inherit; }
-  .post-meta { font-size: 14px; color: var(--suave); margin-bottom: 22px; letter-spacing: .04em; }
-  .post-body p { margin: 0 0 1.1em; }
-  .post-body blockquote { margin: 1.4em 0; padding: 4px 22px; border-left: 3px solid var(--oro); color: var(--suave); font-style: italic; }
-  .post-body hr { border: 0; border-top: 1px solid var(--linea); margin: 2em 0; }
-  .post-footer { font-size: 14px; color: var(--suave); }
-  .blog-pager { display: flex; justify-content: space-between; margin-top: 20px; font: 500 13px 'Cinzel', serif; letter-spacing: .12em; text-transform: uppercase; }
-  .status-msg-wrap { color: var(--suave); text-align: center; }
+/* Secciones */
+section.bloque{padding:40px 0}
+h2{font:700 26px/1.2 'Cinzel',serif;color:var(--oro);margin:0 0 20px;letter-spacing:.04em}
+p{margin:0 0 1.1em}
+.sep{border:0;border-top:1px solid var(--linea);margin:0}
 
-  /* Pie */
-  .site-foot { border-top: 1px solid var(--linea); padding: 30px 0 50px; text-align: center; font-size: 14px; color: var(--suave); }
-  .widget { margin: 0; }
-  .widget h2, .widget h3 { font: 500 13px 'Cinzel', serif; letter-spacing: .18em; text-transform: uppercase; color: var(--oro); }
+/* Capitulos */
+.caps{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
+.caps li{border-bottom:1px solid var(--linea)}
+.caps a{display:flex;justify-content:space-between;gap:16px;padding:16px 4px;color:var(--texto)}
+.caps a:hover{color:var(--oro-claro);background:rgba(212,162,76,.06)}
+.caps small{color:var(--suave);font-size:15px;white-space:nowrap}
+.extra .t{font-style:italic}
 
-  @media (max-width: 600px) {
-    body { font-size: 17px; }
-    .hero { padding: 50px 16px 40px; }
-    h2.post-title, .post-title { font-size: 24px; }
-  }
-  ]]></b:skin>
+/* Botones */
+.acciones{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{display:inline-block;padding:12px 26px;border:1px solid var(--oro);font:500 14px 'Cinzel',serif;letter-spacing:.12em;color:var(--oro-claro)}
+.btn:hover{background:var(--oro);color:var(--tinta)}
+.btn.lleno{background:var(--oro);color:var(--tinta)}
+.btn.lleno:hover{background:var(--oro-claro)}
+
+footer{padding:40px 0 60px;text-align:center;color:var(--suave);font-size:15px;border-top:1px solid var(--linea);margin-top:30px}
+@media (max-width:600px){body{font-size:17px}.lema{font-size:19px;padding-top:44px}}
+@media (prefers-reduced-motion:reduce){.hero{animation:none}html{scroll-behavior:auto}}
+</style>
 </head>
-
 <body>
-  <header class='site-top'>
-    <div class='wrap'>
-      <b:section class='no-items' id='header' maxwidgets='1' showaddelement='no'>
-        <b:widget id='Header1' locked='true' title='Imago Dei (Encabezado)' type='Header' version='2' visible='true'/>
-      </b:section>
-      <b:section class='no-items' id='nav' maxwidgets='1' showaddelement='no'>
-        <b:widget id='PageList1' locked='false' title='Menu' type='PageList' version='2' visible='true'/>
-      </b:section>
-    </div>
-  </header>
 
-  <!-- Portada / hero: solo en la pagina de inicio. Editable desde Diseño. -->
-  <b:if cond='data:view.isHomepage'>
-    <section class='hero'>
-      <b:section class='no-items' id='hero' maxwidgets='1' showaddelement='yes'>
-        <b:widget id='HTML1' locked='false' title='' type='HTML' version='2' visible='true'>
-          <b:widget-settings>
-            <b:widget-setting name='content'>&lt;h1&gt;IMAGO DEI&lt;/h1&gt;&lt;p&gt;El colapso de la ciudad&lt;/p&gt;</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'><data:content/></b:includable>
-        </b:widget>
-      </b:section>
-    </section>
-  </b:if>
+<header class="hero" id="hero">
+  <img src="portada.jpg" alt="Portada de Imago Dei: El colapso de la ciudad" onerror="document.getElementById('hero').classList.add('sin-imagen')">
+  <div class="alt"><h1>IMAGO DEI</h1><p>EL COLAPSO DE LA CIUDAD</p></div>
+</header>
 
-  <main class='main-area'>
-    <div class='wrap'>
-      <b:section class='main' id='main' showaddelement='no'>
-        <b:widget id='Blog1' locked='true' title='Entradas del blog' type='Blog' version='2' visible='true'/>
-      </b:section>
-    </div>
-  </main>
+<main>
+  <p class="lema wrap">Lo que creí que era amor… era solo un reflejo.</p>
 
-  <footer class='site-foot'>
-    <div class='wrap'>
-      <b:section class='foot' id='footer' showaddelement='yes'>
-        <b:widget id='Attribution1' locked='false' title='' type='Attribution' version='2' visible='true'/>
-      </b:section>
+  <section class="bloque wrap" id="historia">
+    <h2>La historia</h2>
+    <p>Symmetria es una ciudad perfecta porque nadie la contradice. VERIN, la inteligencia que la regula, decide qué se recuerda y qué se borra.</p>
+    <p>Toni Sartori trabaja para la Agencia y vive de su imagen pública. Martín Novák, un joven técnico del Barro, sabe cosas que no debería. Lux, una androide detectora de mentiras, es la única que puede distinguir quién es quién. Cuando ocurre el Incidente de la Torre C, la ciudad borra a cuarenta y ocho personas… y alguien lo recuerda.</p>
+    <!-- Editá este texto a tu gusto. -->
+  </section>
+
+  <hr class="sep wrap">
+
+  <section class="bloque wrap" id="leer">
+    <h2>Leer</h2>
+    <ul class="caps">
+      <li><a href="https://www.wattpad.com/user/toni_sartori_ok"><span>Prólogo</span><small>Wattpad</small></a></li>
+      <li><a href="https://www.wattpad.com/user/toni_sartori_ok"><span>Capítulo 1</span><small>Wattpad</small></a></li>
+      <li><a href="https://www.wattpad.com/user/toni_sartori_ok"><span>Capítulo 2</span><small>Wattpad</small></a></li>
+      <li><a href="https://www.wattpad.com/user/toni_sartori_ok"><span>Capítulo 3</span><small>Wattpad</small></a></li>
+      <li class="extra"><a href="https://www.wattpad.com/user/toni_sartori_ok"><span class="t">Archivo clasificado: Protocolo VERIN</span><small>Extra</small></a></li>
+    </ul>
+    <!-- Cuando tengas el link de cada capítulo, reemplazá la dirección de cada <a href="..."> -->
+    <div class="acciones">
+      <a class="btn lleno" href="https://www.wattpad.com/user/toni_sartori_ok">Leer en Wattpad</a>
+      <a class="btn" href="https://www.instagram.com/toni.sartori.ok">Seguir en Instagram</a>
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer>Imago Dei · Libro 1</footer>
+
 </body>
 </html>
-# imagodeinovel
-Historia
