@@ -79,3 +79,4 @@ document.body.style.opacity = "0";
 await wait(1600);
 
 window.location.href = "archivo.html";
+});
