@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070D12">
+    <title>VERIN — Registro de Zonas</title>
+    <link rel="stylesheet" href="zonas.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <span>VERIN // SISTEMA CENTRAL</span>
+        <span>SECTORES TERRITORIALES</span>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <p>AGENCIA CENTRAL · DIVISIÓN TERRITORIAL</p>
+            <h1>REGISTRO DE ZONAS</h1>
+            <p>Distribución geográfica y administrativa de Symmetria.</p>
+        </section>
+
+        <section class="zones">
+
+            <article class="zone">
+                <img src="IMG/symmetria-torres.png" alt="Ciudad de Symmetria">
+
+                <div class="zone-info">
+                    <span>SECTOR A · CLASIFICACIÓN 01</span>
+                    <h2>SYMMETRIA</h2>
+                    <p>
+                        Centro de estabilidad social y desarrollo tecnológico.
+                        La estructura urbana responde a los principios de
+                        Simetría Total.
+                    </p>
+                    <button class="consult-button" data-sector="symmetria">
+                     CONSULTAR SECTOR
+                    </button>
+                </div>
+            </article>
+
+            <article class="zone">
+                <img src="IMG/el-barro.png" alt="Zona industrial de El Barro">
+
+                <div class="zone-info">
+                    <span>SECTOR EXTERIOR · CLASIFICACIÓN 04</span>
+                    <h2>EL BARRO</h2>
+                    <p>
+                        Zona industrial y residencial periférica.
+                        Su actividad permanece bajo supervisión
+                        de la Agencia Central.
+                    </p>
+                    <button class="consult-button" data-sector="barro">
+                     CONSULTAR SECTOR
+                 </button>
+                </div>
+            </article>
+
+        </section>
+    <section id="sector-details" class="sector-details" hidden>
+    <div class="detail-header">
+        <span>VERIN // INFORME TERRITORIAL</span>
+        <span id="detail-code">SECTOR A</span>
+    </div>
+
+    <h2 id="detail-title"></h2>
+    <p id="detail-description"></p>
+
+    <div id="detail-data" class="detail-data"></div>
+
+    <p id="verin-message" class="verin-message"></p>
+
+    <button id="close-details">CERRAR INFORME</button>
+</section>
+
+        <a class="back-link" href="archivo.html">
+            ← REGRESAR AL ARCHIVO CENTRAL
+        </a>
+
+    </main>
+
+    <footer>
+        AGENCIA CENTRAL · SYMMETRIA
+        <span>VERIN // CONTROL TERRITORIAL</span>
+    </footer>
+    
+     <script src="zonas.js"></script>
+
+</body>
+</html>

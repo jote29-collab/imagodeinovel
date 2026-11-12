@@ -49,6 +49,11 @@ function mostrarRegistro() {
     document.getElementById("recordNumber").textContent =
         `REGISTRO ${String(registroActual + 1).padStart(3, "0")} / 006`;
 
+    document.querySelector(".record .eyebrow").textContent =
+        `DOCUMENTO HISTÓRICO · ${String(registroActual + 1).padStart(3, "0")}`;
+
+    document.getElementById("systemMessage").textContent = "";
+
     document.querySelector(".date").textContent = registro.fecha;
     document.querySelector(".record h2").textContent = registro.titulo;
     document.querySelector(".record > p:not(.eyebrow):not(.date)").textContent =

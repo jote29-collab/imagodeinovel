@@ -94,12 +94,20 @@
 
     <script>
         document.getElementById("recordButton").addEventListener("click", function() {
+            this.disabled = true;
             document.getElementById("systemMessage").textContent =
                 "VERIN: No existe ninguna versión anterior de este registro.";
+
+            setTimeout(function() {
+                document.body.style.transition = "opacity 1s";
+                document.body.style.opacity = "0";
+                setTimeout(function() { window.location.href = "verin.html"; }, 1100);
+            }, 2400);
         });
     </script>
 
     <script src="registros.js"></script>
+    <script src="glitch.js"></script>
 
 </body>
 </html>

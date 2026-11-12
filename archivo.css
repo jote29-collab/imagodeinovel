@@ -82,7 +82,7 @@ h1 {
     position: relative;
     background:
         linear-gradient(to top, rgba(0,0,0,.65), transparent 55%),
-        url("img/symmetria-torres.png")
+        url("IMG/symmetria-torres.png")
         center 55% / cover;
     border: 1px solid #454b4d;
 }
@@ -234,4 +234,15 @@ footer {
         flex-direction: column;
         gap: 8px;
     }
+}
+
+/* Fallas ocasionales del sistema */
+.indicator strong.glitch {
+    color: #ff745e;
+    text-shadow: 2px 0 #48d8d0, -2px 0 #ff745e55;
+}
+
+.status-dot.glitch-dot {
+    background: #ff745e;
+    box-shadow: 0 0 10px #ff745e;
 }
