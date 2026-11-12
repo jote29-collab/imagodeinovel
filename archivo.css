@@ -1,0 +1,237 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111416;
+    color: #e6e7e5;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.topbar {
+    height: 65px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #343a3c;
+    background: #171b1d;
+}
+
+.brand {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.brand span {
+    color: #899397;
+    font-weight: 400;
+}
+
+.system-status {
+    color: #aab6b0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    background: #8cae91;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 30px;
+}
+
+.intro {
+    margin-bottom: 35px;
+}
+
+.eyebrow {
+    color: #9aabb0;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #a8afb0;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.city {
+    height: 390px;
+    position: relative;
+    background:
+        linear-gradient(to top, rgba(0,0,0,.65), transparent 55%),
+        url("img/symmetria-torres.png")
+        center 55% / cover;
+    border: 1px solid #454b4d;
+}
+
+.city-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 17px 22px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(12,15,16,.75);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.indicators {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 25px 0 55px;
+    border: 1px solid #343a3c;
+}
+
+.indicator {
+    padding: 22px;
+    border-right: 1px solid #343a3c;
+}
+
+.indicator:last-child {
+    border-right: none;
+}
+
+.indicator span {
+    display: block;
+    color: #9ba5a7;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.indicator strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #dce3df;
+}
+
+.record {
+    max-width: 760px;
+    margin: auto;
+}
+
+h2 {
+    margin-top: 12px;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.date {
+    color: #a4afb1;
+    font-family: monospace;
+    margin: 8px 0 25px;
+}
+
+.record > p:not(.eyebrow):not(.date) {
+    color: #c1c7c5;
+    line-height: 1.9;
+}
+
+.record-warning {
+    margin-top: 30px;
+    padding: 22px;
+    background: #1a2021;
+    border-left: 3px solid #ad9a70;
+}
+
+.record-warning span {
+    color: #c0ad82;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.record-warning p {
+    margin: 10px 0;
+}
+
+.record-warning small {
+    color: #929c9d;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: 1px solid #727f80;
+    background: transparent;
+    color: #e3e7e4;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: #283133;
+    border-color: #b8c5c1;
+}
+
+.system-message {
+    margin-top: 18px;
+    color: #c0ad82;
+    font-size: 13px;
+}
+
+footer {
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #343a3c;
+    color: #899396;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+    main {
+        padding: 40px 18px;
+    }
+
+    .city {
+        height: 260px;
+    }
+
+    .indicators {
+        grid-template-columns: 1fr;
+    }
+
+    .indicator {
+        border-right: none;
+        border-bottom: 1px solid #343a3c;
+    }
+
+    .indicator:last-child {
+        border-bottom: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

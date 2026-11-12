@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo Central // Symmetria</title>
+    <link rel="stylesheet" href="archivo.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">SYMMETRIA <span>// SECTOR A</span></div>
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SISTEMA OPERATIVO
+        </div>
+    </header>
+
+    <main>
+
+        <section class="intro">
+            <p class="eyebrow">AGENCIA CENTRAL · ARCHIVO HISTÓRICO</p>
+            <h1>ARCHIVO CENTRAL</h1>
+            <p class="subtitle">Registro institucional de la civilización.</p>
+        </section>
+
+        <section class="city">
+            <div class="city-caption">
+                <span>SECTOR A — SYMMETRIA</span>
+
+                <div class="record-navigation">
+                    <button id="prevRecord" aria-label="Registro anterior">‹</button>
+                    <span id="recordNumber">REGISTRO 001 / 006</span>
+                    <button id="nextRecord" aria-label="Registro siguiente">›</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="indicators">
+            <div class="indicator">
+                <span>ESTABILIDAD SOCIAL</span>
+                <strong>99,98%</strong>
+            </div>
+
+            <div class="indicator">
+                <span>INTEGRIDAD DEL SISTEMA</span>
+                <strong>100%</strong>
+            </div>
+
+            <div class="indicator">
+                <span>ESTADO DEL SECTOR</span>
+                <strong>ESTABLE</strong>
+            </div>
+        </section>
+
+        <section class="record">
+
+            <p class="eyebrow">DOCUMENTO HISTÓRICO · 001</p>
+
+            <h2>Consolidación de la Red de Cristal</h2>
+
+            <p class="date">12.08.2023</p>
+
+            <p>
+                La integración de la infraestructura urbana alcanzó
+                su fase de consolidación. La Red de Cristal cubre
+                la totalidad del valle y garantiza la continuidad
+                operativa del Sector A.
+            </p>
+
+            <div class="record-warning">
+                <span>OBSERVACIÓN DEL SISTEMA</span>
+                <p>Existe una versión anterior de este registro.</p>
+                <small>CONSULTA RESTRINGIDA POR DIRECTIVA VERIN.</small>
+            </div>
+
+            <button id="recordButton">
+                CONSULTAR REGISTRO ANTERIOR
+            </button>
+
+            <p id="systemMessage" class="system-message"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <span>AGENCIA CENTRAL · SYMMETRIA</span>
+        <span>PROTOCOLO VERIN // ARCHIVO 001</span>
+    </footer>
+
+    <script>
+        document.getElementById("recordButton").addEventListener("click", function() {
+            document.getElementById("systemMessage").textContent =
+                "VERIN: No existe ninguna versión anterior de este registro.";
+        });
+    </script>
+
+    <script src="registros.js"></script>
+
+</body>
+</html>

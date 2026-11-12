@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #070D12;
+    color: #D8E1E5;
+    font-family: "Courier New", monospace;
+    min-height: 100vh;
+}
+
+#system-entry {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 7%;
+    background:
+        radial-gradient(ellipse at center, #12232b 0%, #070D12 70%);
+}
+
+.system-header,
+.system-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #48D8D0;
+}
+
+.system-status i {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #48D8D0;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #48D8D0;
+    margin-right: 8px;
+}
+
+.entry-content {
+    width: 100%;
+    max-width: 650px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.system-symbol {
+    font-size: 48px;
+    color: #D2B66F;
+    margin-bottom: 25px;
+    text-shadow: 0 0 25px #D2B66F;
+}
+
+.system-label,
+.system-subtitle {
+    color: #48D8D0;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 10vw, 100px);
+    color: #D2B66F;
+    letter-spacing: 8px;
+    margin: 20px 0;
+    text-shadow: 0 0 35px #a78a4255;
+}
+
+.system-log {
+    text-align: left;
+    display: inline-block;
+    margin: 55px auto;
+    color: #82979F;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.warning {
+    color: #FF745E;
+}
+
+.main-message h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(24px, 4vw, 38px);
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+.main-message p {
+    margin-top: 15px;
+    color: #D2B66F;
+    font-style: italic;
+}
+
+#access-button {
+    margin-top: 45px;
+    padding: 19px 38px;
+    border: 1px solid #48D8D0;
+    background: transparent;
+    color: #48D8D0;
+    letter-spacing: 3px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#access-button:hover {
+    background: #48D8D0;
+    color: #070D12;
+    box-shadow: 0 0 30px #48D8D088;
+}
+
+.system-footer {
+    color: #64777F;
+    font-size: 9px;
+}
+
+@media (max-width: 600px) {
+    #system-entry {
+        padding: 25px 5%;
+    }
+
+    .system-header,
+    .system-footer {
+        font-size: 8px;
+    }
+
+    .system-log {
+        font-size: 11px;
+    }
+}
+
+/* ZONAS DE INTEGRACIÓN URBANA */
+
+.zones {
+    margin-top: 85px;
+    padding-top: 35px;
+    border-top: 1px solid #343a3c;
+}
+
+.zones-heading {
+    margin-bottom: 28px;
+}
+
+.zones-heading h2 {
+    margin-top: 12px;
+    font-size: 30px;
+}
+
+.zones-heading > p:last-child {
+    color: #a8afb0;
+    margin-top: 6px;
+}
+
+.zone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.zone-card {
+    background: #191e20;
+    border: 1px solid #343a3c;
+    overflow: hidden;
+}
+
+.zone-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.zone-info {
+    padding: 22px;
+}
+
+.zone-info span {
+    color: #a7b5b5;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.zone-info h3 {
+    margin: 8px 0;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.zone-info p {
+    color: #b5bdbc;
+    font-size: 14px;
+    min-height: 45px;
+}
+
+.zone-info small {
+    display: block;
+    margin-top: 18px;
+    color: #b6a77f;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 650px) {
+    .zone-grid {
+        grid-template-columns: 1fr;
+    }
+}
