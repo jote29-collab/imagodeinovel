@@ -70,14 +70,12 @@ accessButton.addEventListener("click", async () => {
 
     systemLog.appendChild(warning);
 
-    // REINICIO
-    await wait(4500);
+    // TRANSICIÓN AL ARCHIVO CENTRAL
+await wait(4500);
 
-    document.body.style.transition = "opacity 1.5s";
-    document.body.style.opacity = "0";
+document.body.style.transition = "opacity 1.5s";
+document.body.style.opacity = "0";
 
-    await wait(1600);
+await wait(1600);
 
-    location.reload();
-
-});
+window.location.href = "archivo.html";
