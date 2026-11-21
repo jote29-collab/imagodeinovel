@@ -1,0 +1,9 @@
+# IMAGO DEI — Archivo Central de Symmetria
+
+> Sitio oficial y archivo interactivo de la novela de ciencia ficción Imago Dei.
+
+## Información general
+- **Novela:** Imago Dei
+- **Autores:** Toni Sartori (@tonisartori.ok) y Jorge Calero
+- **Concepto:** Archivo Central de Symmetria, sistema de control y memoria.
+- **URL oficial:** https://imagodeinovel.com/
